@@ -1,0 +1,93 @@
+ Weekly Horoscope Zodiac Sign App – Documentation
+====================================================================================================================
+The Weekly Horoscope Zodiac Sign App is a Python GUI application built using Tkinter.
+It allows users to:
+Select their preferred language (English or Hindi)
+Enter their date of birth
+Automatically detect their Zodiac sign
+Read a random weekly horoscope
+Restart or exit the application easily
+The application supports bilingual horoscope reading, making it user-friendly for a wider audience. 
+====================================================================================================================
+🛠 Technologies & Libraries Used
+Library	                     Purpose
+tkinter	                     GUI creation
+messagebox	Error and info popups
+simpledialog	Language selection input
+datetime	                     Date validation and zodiac calculation
+random	                     Random weekly horoscope selection
+====================================================================================================================
+Supported Languages
+ English
+ Hindi
+Users choose their language at startup. If an invalid option is entered, the app defaults to English.
+====================================================================================================================
+Zodiac Signs Covered
+All 12 Zodiac signs are supported:
+Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces
+Each sign contains multiple weekly horoscope messages, and one is randomly selected every time.
+====================================================================================================================
+Application Flow
+Language Selection
+1) On startup, a dialog asks the user to select English or Hindi
+The UI text updates dynamically based on the selected language
+
+2) Birthday Input
+User enters date of birth in YYYY-MM-DD format
+Invalid formats are caught and handled gracefully
+
+3) Zodiac Sign Calculation
+The app calculates the zodiac sign using day and month logic
+The detected zodiac sign is displayed instantly
+
+4️) Weekly Horoscope Display
+A random weekly horoscope is selected using the random module
+Horoscope is shown in the selected language
+The user is asked if they want to:
+         Get another horoscope
+         Exit the app
+====================================================================================================================
+Reset & Exit Options
+Yes → Clears all inputs and restarts the flow
+No → Closes the application safely
+====================================================================================================================
+Key Functions Explained
+switch_language_data(lang)
+Switches horoscope data between English and Hindi
+Updates UI text accordingly
+get_zodiac_sign(day, month)
+Determines zodiac sign based on birth date
+Uses standard zodiac date ranges
+calculate_zodiac()
+Validates the birthday input
+Extracts day and month
+Displays the zodiac sign
+show_horoscope()
+Randomly selects a horoscope for the detected zodiac sign
+Displays it in the chosen language
+reset_app()
+Clears all inputs
+Resets UI state for a fresh start
+exit_app()
+Safely closes the Tkinter application
+====================================================================================================================
+GUI Design
+Clean dark-themed interface
+Large readable fonts
+Disabled text editing for horoscope output
+Dynamic button visibility based on user actions
+====================================================================================================================
+ Error Handling
+Invalid date formats
+Missing input
+Invalid language choice
+Safe exit without crashing
+====================================================================================================================
+Conclusion
+This project demonstrates:
+GUI development with Tkinter
+Date handling using datetime
+Randomized content generation
+Bilingual application support
+Clean user interaction flow
+It is ideal for college projects, portfolio work, and beginner-to-intermediate Python learning.
